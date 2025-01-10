@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictive Maintenance</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Predictive Maintenance Model</h2>
+        <form action="/predict" method="POST">
+            <label for="air_temp">Air Temperature:</label>
+            <input type="text" name="air_temp" id="air_temp" required>
+
+            <label for="process_temp">Process Temperature:</label>
+            <input type="text" name="process_temp" id="process_temp" required>
+
+            <label for="rpm">RPM:</label>
+            <input type="text" name="rpm" id="rpm" required>
+
+            <label for="torque">Torque:</label>
+            <input type="text" name="torque" id="torque" required>
+
+            <label for="tool_wear">Tool Wear:</label>
+            <input type="text" name="tool_wear" id="tool_wear" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='animation.js') }}"></script>
+</body>
+</html>
